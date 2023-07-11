@@ -11,7 +11,6 @@ public class Pizza {
     private String bill;
     private int cheese;
     private int toppings;
-    boolean isDelux=false;
 
 
     public Pizza(Boolean isVeg){
@@ -26,8 +25,7 @@ public class Pizza {
             toppings=120;
         }
         this.cheese=80;
-        this.bill="";
-        System.out.println("Base Price Of The Pizza: "+price);
+        this.bill="Base Price Of The Pizza: "+price+"\n";
     }
     public int getPrice(){
         return this.price;
@@ -59,8 +57,8 @@ public class Pizza {
         // your code goes here
         if(flagBillGenerated)return "";
 
-        if(flagForCheese && !isDelux)this.bill+="Extra Cheese Added: "+cheese+"\n";
-        if(flagForToppings && !isDelux)this.bill+="Extra Toppings Added: "+toppings+"\n";
+        if(flagForCheese )this.bill+="Extra Cheese Added: "+cheese+"\n";
+        if(flagForToppings)this.bill+="Extra Toppings Added: "+toppings+"\n";
         if(flagTakeAway)this.bill+="Paperbag Added: "+20 +"\n";
         this.bill+="Total price: "+price+"\n";
         flagBillGenerated=true;
