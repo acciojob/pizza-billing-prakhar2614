@@ -60,7 +60,7 @@ public class Pizza {
         if(flagForCheese )this.bill+="Extra Cheese Added: "+cheese+"\n";
         if(flagForToppings)this.bill+="Extra Toppings Added: "+toppings+"\n";
         if(flagTakeAway)this.bill+="Paperbag Added: "+20 +"\n";
-        this.bill+="Total price: "+price+"\n";
+        this.bill+="Total Price: "+price+"\n";
         flagBillGenerated=true;
         return this.bill;
     }
