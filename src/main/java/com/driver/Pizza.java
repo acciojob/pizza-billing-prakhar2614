@@ -26,7 +26,8 @@ public class Pizza {
             toppings=120;
         }
         this.cheese=80;
-        System.out.print("Base Price Of The Pizza: ");
+        this.bill="";
+        System.out.println("Base Price Of The Pizza: "+price);
     }
     public int getPrice(){
         return this.price;
@@ -57,12 +58,11 @@ public class Pizza {
     public String getBill(){
         // your code goes here
         if(flagBillGenerated)return "";
-        bill=String.valueOf(price);
 
-        if(flagForCheese && !isDelux)System.out.println("Extra Cheese Added: "+cheese);
-        if(flagForToppings && !isDelux)System.out.println("Extra Toppings Added: "+toppings);
-        if(flagTakeAway)System.out.println("Paperbag Added: 20");
-        System.out.print("Total Price: ");
+        if(flagForCheese && !isDelux)this.bill+="Extra Cheese Added: "+cheese+"\n";
+        if(flagForToppings && !isDelux)this.bill+="Extra Toppings Added: "+toppings+"\n";
+        if(flagTakeAway)this.bill+="Paperbag Added: "+20 +"\n";
+        this.bill+="Total price: "+price+"\n";
         flagBillGenerated=true;
         return this.bill;
     }
