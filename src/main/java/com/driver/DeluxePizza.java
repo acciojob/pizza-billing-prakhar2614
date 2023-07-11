@@ -4,8 +4,9 @@ public class DeluxePizza extends Pizza {
 
     public DeluxePizza(Boolean isVeg) {
         super(isVeg);
-        setFlagForCheese(true);
-        setFlagForToppings(true);
+        this.flagForCheese=true;
+        this.flagForToppings=true;
+        this.isDelux=true;
         // your code goes here
     }
 }
